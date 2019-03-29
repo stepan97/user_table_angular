@@ -1,0 +1,28 @@
+<h1>User table</h1>
+
+<h2 *ngIf="!data">Loading</h2>
+
+<table *ngIf="data" id="users_table">
+  <tr>
+    <th>id</th>
+    <th>balance</th>
+    <th>age</th>
+    <th>name</th>
+    <th>gender</th>
+    <th>company</th>
+    <th>email</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let item of data;">
+    <td>{{item.id}}</td>
+    <td>{{item.balance}}</td>
+    <td>{{item.age}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.gender}}</td>
+    <td>{{item.company}}</td>
+    <td>{{item.email}}</td>
+    <td><button>Edit</button></td>
+    <td><button>Delete</button></td>
+  </tr>
+</table>
