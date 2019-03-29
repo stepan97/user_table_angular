@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomePageComponent implements OnInit {
 
   data: Array<object> = null;
+  hopar: number = Math.floor(Math.random() * 10);
 
   constructor() { 
   }

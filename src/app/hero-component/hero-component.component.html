@@ -1,0 +1,11 @@
+<div>
+  <span>id {{hero.id}}</span>
+  <br>
+  <h2>name {{hero.name}}</h2>
+  <span>
+    <input type="text" [(ngModel)] = "hero.name">
+  </span>
+</div>
+
+<br>
+<button (click)='addHero()'>Click me!</button>
