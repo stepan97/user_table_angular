@@ -1,0 +1,56 @@
+h1{
+    text-align: center;
+  }
+  
+  button{
+    top: 330px;
+    position: relative;
+    left: 49%;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+
+  #backBtn{
+    font-size: 20px;
+
+  }
+
+  .split {
+      /* height: 100%; */
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      /* top: 0; */
+      overflow-x: hidden;
+      padding-top: 20px;
+      background-color: #eeefef;
+    }
+    
+  .split input {
+    margin-bottom: 24px;
+    margin-left: 10px;
+  }
+  
+  .split select {
+    margin-bottom: 24px;
+    margin-left: 10px;
+  }
+  
+  .split label {
+    display: inline-block;
+    margin-bottom: 24px;
+    margin-right: 20px;
+  }
+  
+    .left {
+      left: 0;
+      /* background-color: #aaa; */
+      text-align: right;
+      font-size: 18px;
+    }
+    
+    .right {
+      right: 0;
+      /* background-color: red; */
+      text-align: left;
+    }

@@ -10,6 +10,10 @@ import { TableComponent } from './table/table.component';
 import { TableRowComponent } from './table-row/table-row.component';
 import { UserService } from './services/users.service';
 import { HttpModule } from '@angular/http';
+// import { RouterModule } from '@angular/router';
+import { AddNewUserComponent } from './add-new-user/add-new-user.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +21,21 @@ import { HttpModule } from '@angular/http';
     HomePageComponent,
     HeroComponentComponent,
     TableComponent,
-    TableRowComponent
+    TableRowComponent,
+    AddNewUserComponent,
+    NotFoundComponent,
+    EditUserComponent
   ],
   imports: [
-  BrowserModule,
+    BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpModule
+    // RouterModule.forRoot([
+    //   {path: '', component: HomePageComponent},
+    //   {path: 'addNewUser', component: AddNewUserComponent},
+    //   {path: '**', component: NotFoundComponent}
+    // ])
   ],
   providers: [
     UserService

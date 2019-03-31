@@ -1,0 +1,43 @@
+<h1>Edit user {{user.name}}</h1>
+
+<input (click)="onBackBtnPressed()" id="backBtn" type="button" value="Back">
+
+<div class='split left'>
+  <label for="balance">Balance</label>
+  <br>
+  <label for="age">Age</label>
+  <br>
+  <label for="name">Name</label>
+  <br>
+  <label for="gender">Gender</label>
+  <br>
+  <label for="company">Company</label>
+  <br>
+  <label for="email">Email</label>
+</div>
+
+
+
+<div class="split right">
+  <input [(ngModel)]="user.balance" type="number" min="0" id="balance" name="balance">
+
+  <br>
+  <input [(ngModel)]="user.age" type="number" min="0" id="age" name="age">
+
+  <br>
+  <input [(ngModel)]="user.name" type="text" min="0" id="name" name="name">
+
+  <br>
+  <select id="select" name="select" [(ngModel)]="user.gender">
+    <option *ngFor="let gender of genders" name="gender">{{gender}}</option>
+  </select>
+
+  <br>
+  <input [(ngModel)]="user.company" type="text" min="0" id="company" name="company">
+
+  <br>
+  <input [(ngModel)]="user.email" type="email" min="0" id="email" name="email">
+</div>
+
+
+<button (click)="onSubmit()">Submit</button>

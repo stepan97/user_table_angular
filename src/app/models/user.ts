@@ -1,7 +1,7 @@
-// enum HumanTypes {
-//     male = "male",
-//     female = "female"
-// };
+export enum HumanTypes {
+    male = "male",
+    female = "female"
+};
 
 export interface User {
     id: number,

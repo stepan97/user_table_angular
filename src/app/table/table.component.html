@@ -1,3 +1,7 @@
+<h1>Users table</h1>
+
+<a id="addNewBtn" [routerLink]="['/add-new-user']">Add new user</a>
+
 <table>
     <tr>
       <th *ngFor="let col of columns">
@@ -15,10 +19,10 @@
         {{user[col]}}
       </td>
       <td>
-        <button value={{user.id}}>Edit</button>
+        <a [routerLink]="['/edit-user', user.id]">Edit</a>
       </td>
       <td>
-        <button value={{user.id}}>Remove</button>
+        <button value={{user.id}} (click)="onRemoveBtnClicked(user.id)">Remove</button>
       </td>
     </tr>
   </table>

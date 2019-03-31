@@ -12,15 +12,23 @@ export class TableComponent implements OnInit {
   users: User[] = [];
   columns: string[] = [];
 
-  constructor(service: UserService) {
-    this.columns = service.getColumns();
-    service.getUsers().subscribe(response => {
-      this.users = response.json();
-    });
-   }
+  constructor(private service: UserService) {}
 
   ngOnInit() {
-    
+    this.columns = this.service.getColumns();
+    this.service.getUsers().subscribe(users => this.users = users);
+  }
+
+  onRemoveBtnClicked(id){
+    this.service.removeUser(id).subscribe(response => {      
+      // get index of deleted row and remove it from table view
+      let index = this.users.findIndex(user => user.id === id);
+      if(!index) return console.log("Could not find index..");
+
+      alert(`User ${this.users[index].name} deleted.`);
+
+      this.users.splice(index, 1);
+    });
   }
 
 }
