@@ -1,0 +1,24 @@
+<table>
+    <tr>
+      <th *ngFor="let col of columns">
+        {{col}}
+      </th>
+      <th>
+        Edit
+      </th>
+      <th>
+        Remove
+      </th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td *ngFor="let col of columns">
+        {{user[col]}}
+      </td>
+      <td>
+        <button value={{user.id}}>Edit</button>
+      </td>
+      <td>
+        <button value={{user.id}}>Remove</button>
+      </td>
+    </tr>
+  </table>
